@@ -1,0 +1,15 @@
+{
+  "name": "the-gym-stripe",
+  "version": "1.0.0",
+  "description": "This is the cloning of stripe, It is in css combined execises of the GYM",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss build -i ./src/input.css -o ./dist/output.css -w"
+  },
+  "author": "Eric Nkaka",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
