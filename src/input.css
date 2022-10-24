@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
+
+#gradient-canvas {
+    --gradient-color-1: #a960ee;
+    --gradient-color-2: #ff333d;
+    --gradient-color-3: #90e0ff;
+    --gradient-color-4: #ffcb57;
+}
+.hero {
+    --effect-strength: 0.3;
+    padding: 1em;
+    isolation: isolate;
+    position: relative;
+}
+canvas{
+    height: 100%;
+    width: 100%;
+}
+.container{
+  --max-width: 50rem;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: inline auto;
+}
+.canvas-container {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 38%, 0 85%);
+}
+.hero-title-container {
+    position: relative;
+    margin-block:9rem;
+    margin-left: 5rem;
+}
+.hero-title {
+    /* white-space: nowrap;  */
+    color: #3a3a3a;
+    mix-blend-mode: color-burn;
+    line-height: 1.1;
+    font-weight: 700;
+    font-size: 5.5rem;
+    max-width: 13ch;
+    margin: 0;
+}
+.hero-title[data-overlay]{
+   position: absolute;
+   left: 0;
+   top: 0;
+   color: #111;
+   z-index: 2;
+   opacity: calc(1 - var(--effect-strength))
+}
+.hero-card {
+    margin-block:4rem;
+    margin-left: 0rem;
+}
